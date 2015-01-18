@@ -1,6 +1,6 @@
 
-public class Dollar {
-    private int amount;
+public class Dollar extends Money{
+
 
     Dollar(int a){
         amount=a;
@@ -11,8 +11,8 @@ public class Dollar {
     }
 
     public boolean equals(Object object) {
-        Dollar dollar= (Dollar) object;
-        return amount == dollar.amount;
+        Money money= (Money) object;
+        return amount == money.amount;
     }
 
 
