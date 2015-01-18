@@ -1,6 +1,6 @@
 
 public class Dollar {
-    public int amount;
+    private int amount;
 
     Dollar(int a){
         amount=a;
