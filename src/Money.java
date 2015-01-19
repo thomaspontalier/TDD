@@ -1,7 +1,7 @@
 /**
  * Created by Thomas on 19/01/2015.
  */
-class Money {
+class Money implements Expression{
     protected int amount;
 
     Money(int amount, String currency) {
@@ -25,6 +25,10 @@ class Money {
 
     Money times(int multiplier) {
         return new Money(amount * multiplier, currency);
+    }
+
+    Expression plus(Money addend) {
+        return new Money(amount + addend.amount, currency);
     }
 
     protected String currency;
